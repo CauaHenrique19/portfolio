@@ -1,0 +1,348 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fafafa;
+    font-family: 'Rubik', sans-serif;
+}
+body{
+    background-color: black;
+    overflow: overlay;
+    scroll-behavior: smooth;
+}
+img{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+}
+::-moz-selection{
+    background: rgba(255, 255, 255, 0.25);
+}
+::selection{
+    background: rgba(255, 255, 255, 0.25);
+}
+body::-webkit-scrollbar{
+    width: 7px;
+}
+body::-webkit-scrollbar-thumb{
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../assets/DarkGradient101.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container header{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15%;
+}
+.container header .logo-container h1{
+    font-weight: 700;
+}
+.container header .menu-container{
+    height: 100%;
+}
+.container header .menu-container ul{
+    display: flex;
+    height: 100%;
+}
+.container header .menu-container li{
+    width: 100px;
+    height: 100%;
+    list-style: none;
+    margin-right: 10px;
+}
+.container header .menu-container li:hover{
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 2px solid rgba( 255, 255, 255, 0.18 );
+    border-top: none;
+}
+.container header .menu-container li a{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: color 0.3s;
+}
+.container main{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    /* position: absolute; */
+}
+.container main .text-container{
+    width: 900px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container main .text-container h1{
+    width: 900px;
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.container main .text-container p{
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: center;
+    width: 550px;
+}
+.container button{
+    display: flex;
+    flex-direction: column;
+    background: initial;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    margin-top: 100px;
+}
+.container button ion-icon{
+    font-size: 2rem;
+    position: absolute;
+}
+.container button ion-icon:nth-child(2){
+    animation: buttonNextPage1 1.5s infinite;
+}
+.container button ion-icon:nth-child(3){
+    animation: buttonNextPage2 1.5s infinite;
+}
+@keyframes buttonNextPage1 {
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 15px;
+    }
+}
+@keyframes buttonNextPage2 {
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+.about{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-image: url('../assets/DarkGradient101.png'); */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 0 15%;
+}
+.about .text-container{
+    width: 500px;
+}
+.about .text-container h1{
+    font-size: 4rem;
+    margin-bottom: 30px;
+}
+.about .text-container p{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.strong-point{
+    width: 100vw;
+    height: 100vh;
+    padding: 5% 15%;
+    background-image: url('../assets/DarkGradient01.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.strong-point h1{
+    font-size: 4rem;
+    margin-bottom: 120px;
+}
+.strong-point .cards{
+    width: 100%;
+    display: flex;
+}
+.strong-point .cards .card{
+    width: 400px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* background-color: #0f0f0f; */
+    margin-right: 20px;
+    border-radius: 50px;
+    transition: transform 0.3s;
+    border: 1px solid rgba(128, 128, 128, 0.205);
+}
+.strong-point .cards .card:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 30px 15px rgba(29, 29, 29, 0.103);
+}
+.strong-point .cards .card .icon-container{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    position: absolute;
+    top: -70px;
+    z-index: 10;
+}
+.strong-point .cards .card .icon-container img{
+    width: 150px;
+    height: 150px;
+}
+.strong-point .cards .card .text-container{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.strong-point .cards .card .text-container h1{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.strong-point .cards .card .text-container p{
+    text-align: center;
+    width: 80%;
+    font-size: 1.5rem;
+}
+.projects{
+    width: 100vw;
+    height: fit-content;
+    background-image: url('../assets/DarkGradient01Rotated.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.projects h1{
+    font-size: 4rem;
+    margin-bottom: 20px;
+    padding: 0 15%;
+}
+.projects-slider{
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+}
+.next{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 90px;
+    cursor: pointer;
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 2px solid rgba( 255, 255, 255, 0.18 );
+}
+.next ion-icon{
+    font-size: 1.5rem;
+}
+.project{
+    min-width: 450px;
+    height: 300px;
+    
+    background-color: black;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    transition: transform 0.3s;
+    position: relative;
+}
+.project:hover .project-info{
+    display: block;
+    transition: background-color 1s;
+    background-color: rgba(0, 0, 0, 0.377);
+}
+.project img{
+    width: 100%;
+    height: 100%;
+}
+.project-info{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+.medias{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 15%;
+    position: relative;
+}
+.medias .content-container{
+    width: 800px;
+}
+.medias .content-container h1{
+    width: 400px;
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+.medias .content-container .socials{
+    display: flex;
+    align-items: center;
+}
+.medias .content-container .socials .social{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border: 1px solid rgba(128, 128, 128, 0.205);
+    margin-right: 10px;
+    transition: all 0.5s;
+}
+.medias .content-container .socials .social ion-icon{
+    font-size: 4rem;
+}
+.medias .content-container .socials .social:hover{
+    border-radius: 100%;
+    background-image: url('../assets/DarkGradient07.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 0px 0px 30px 15px rgba(29, 29, 29, 0.452);
+    transform: scale(1.2);
+}
+.medias .image-container img{
+    width: 650px;
+    position: absolute;
+    bottom: 0;
+    right: 15%;
+}
