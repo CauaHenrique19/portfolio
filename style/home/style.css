@@ -249,11 +249,10 @@ body::-webkit-scrollbar-thumb{
 .projects-slider{
     height: fit-content;
     display: flex;
+    justify-content: center;
     align-items: center;
-    overflow-x: hidden;
-    position: relative;
 }
-.next{
+/* .next{
     width: 60px;
     height: 60px;
     display: flex;
@@ -269,21 +268,25 @@ body::-webkit-scrollbar-thumb{
 }
 .next ion-icon{
     font-size: 1.5rem;
-}
+} */
 .project{
     min-width: 450px;
     height: 300px;
     
-    background-color: black;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-
     transition: transform 0.3s;
-    position: relative;
 }
 .project:hover .project-info{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     transition: background-color 1s;
     background-color: rgba(0, 0, 0, 0.377);
+}
+.project:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.233);
 }
 .project img{
     width: 100%;
@@ -296,9 +299,30 @@ body::-webkit-scrollbar-thumb{
     top: 0;
     display: none;
 }
+.project-info h1{
+    font-size: 2rem;
+    margin: 0 0 5px 0;
+}
+.project-info p{
+    margin-bottom: 10px;
+}
+.project-info button{
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
 .medias{
     width: 100vw;
-    height: 80vh;
+    height: 60vh;
     display: flex;
     justify-content: space-between;
     padding: 5% 15%;
@@ -306,6 +330,9 @@ body::-webkit-scrollbar-thumb{
 }
 .medias .content-container{
     width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 .medias .content-container h1{
     width: 400px;
