@@ -6,7 +6,7 @@
     font-family: 'Rubik', sans-serif;
 }
 body{
-    background-color: black;
+    background-color: #0a0a0a;
     overflow: overlay;
     scroll-behavior: smooth;
 }
@@ -38,14 +38,50 @@ body::-webkit-scrollbar-thumb{
 .container{
     width: 100vw;
     height: 100vh;
-    background-image: url('../assets/DarkGradient101.png');
+    /* background-image: url('../assets/DarkGradient101.png'); */
     background-size: 100% 100%;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.container header{
+.container main,
+.container button{
+    z-index: 10;
+}
+.container canvas{
+    position: absolute;
+}
+header{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15%;
+    position: sticky;
+    top: 0;
+    z-index: 11;
+    background-color: #0a0a0a38;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+header .logo-container h1{
+    font-weight: 300;
+}
+header .menu-container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+header .menu-container h2{
+    margin-right: 15px;
+    font-weight: 300;
+}
+header .menu-container ion-icon{
+    font-size: 1.5rem;
+}
+/* .container header{
     width: 100%;
     height: 10vh;
     display: flex;
@@ -54,12 +90,21 @@ body::-webkit-scrollbar-thumb{
     padding: 0 15%;
 }
 .container header .logo-container h1{
-    font-weight: 700;
+    font-weight: 300;
 }
 .container header .menu-container{
     height: 100%;
+    display: flex;
+    align-items: center;
 }
-.container header .menu-container ul{
+.container header .menu-container h2{
+    margin-right: 15px;
+    font-weight: 300;
+}
+.container header .menu-container ion-icon{
+    font-size: 1.5rem;
+} */
+/* .container header .menu-container ul{
     display: flex;
     height: 100%;
 }
@@ -86,7 +131,7 @@ body::-webkit-scrollbar-thumb{
     font-size: 1.2rem;
     text-align: center;
     transition: color 0.3s;
-}
+} */
 .container main{
     width: 100%;
     height: fit-content;
@@ -109,7 +154,7 @@ body::-webkit-scrollbar-thumb{
     text-align: center;
 }
 .container main .text-container p{
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     font-weight: 300;
     text-align: center;
     width: 550px;
@@ -176,7 +221,7 @@ body::-webkit-scrollbar-thumb{
     width: 100vw;
     height: 100vh;
     padding: 5% 15%;
-    background-image: url('../assets/DarkGradient01.png');
+    /* background-image: url('../assets/DarkGradient01.png'); */
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -237,21 +282,42 @@ body::-webkit-scrollbar-thumb{
 .projects{
     width: 100vw;
     height: fit-content;
-    background-image: url('../assets/DarkGradient01Rotated.png');
+    /* background-image: url('../assets/DarkGradient01Rotated.png'); */
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    padding: 0 15%;
 }
 .projects h1{
     font-size: 4rem;
-    margin-bottom: 20px;
-    padding: 0 15%;
 }
-.projects-slider{
+.projects .columns-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.projects .column{
+    margin: 50px;
+}
+.projects .column:nth-child(2){
+    padding-top: 100px;
+}
+.projects .column .project{
+    width: 380px;
+    height: 500px;
+    background-color: red;
+    margin-bottom: 100px;
+    transition: transform 0.5s;
+}
+.projects .column .project:hover{
+    transform: scale(0.95);
+}
+/* .projects-slider{
     height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 /* .next{
     width: 60px;
     height: 60px;
@@ -269,7 +335,7 @@ body::-webkit-scrollbar-thumb{
 .next ion-icon{
     font-size: 1.5rem;
 } */
-.project{
+/* .project{
     min-width: 450px;
     height: 300px;
     
@@ -319,7 +385,7 @@ body::-webkit-scrollbar-thumb{
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
-}
+} */
 .medias{
     width: 100vw;
     height: 60vh;
